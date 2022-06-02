@@ -4,7 +4,7 @@ Automated tests using API and 'requests' library
 
 You can find in **books**:
 
-**requests**
+* **requests**
 
-**automated tests**
+* **automated tests**
 
