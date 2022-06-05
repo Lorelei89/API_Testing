@@ -5,6 +5,14 @@
 * Python
 * Pycharm
 
+📌 HTTP methods:
+***  POST
+*  GET
+*  PUT
+*  PATCH
+*  DELETE**
+⏬
+**CRUD**: _create, read, update,_ and _delete_
  
 📗 You can find in **books**:
 * **requests**
