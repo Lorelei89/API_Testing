@@ -9,6 +9,5 @@
 📗 You can find in **books**:
 
 * **requests**
-
 * **automated tests**
 
