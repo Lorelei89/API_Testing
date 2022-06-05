@@ -7,14 +7,14 @@
 
 📌 HTTP methods:
 *  **POST**
-* ** GET**
-* ** PUT**
+*  **GET**
+*  **PUT**
 *  **PATCH**
 *  **DELETE**
  
 ⏬
 
-**CRUD**: _create, read, update,_ and _delete_
+**CRUD**: _create, read, update_ and _delete_
  
 📗 You can find in **books**:
 * **requests**
