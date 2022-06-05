@@ -7,7 +7,12 @@
 
  
 📗 You can find in **books**:
-
 * **requests**
-* **automated tests**
+* **automated API tests**
+
+⏩ Steps to download the repository:
+* Navigate to the to level of the project;
+* Click on the blue ‘Code’ button;
+* Choose either ‘Open with Github Desktop’ if you have installed ‘Github Desktop’ on your computer or ‘Download ZIP’ to download as ZIP document
+* Make sure you use PyCharm with this repository
 
