@@ -1,10 +1,12 @@
 # API_Testing
  
-Automated tests using API and 'requests' library
+💡 Automated tests using API:
+* _requests_ and _pytest_ libraries
 * Python
 * Pycharm
 
-You can find in **books**:
+ 
+📗 You can find in **books**:
 
 * **requests**
 
