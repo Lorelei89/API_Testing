@@ -1,4 +1,7 @@
+import sys
 from random import randint
+
+import pytest
 
 from books.requests.api_client import login
 
@@ -7,9 +10,7 @@ class TestApiClient:
     nr = randint(1, 9999999999)
     clientName = 'Maria'
     clientEmail = f'valid_email{nr}@email.com'
-
-    def setup_method(self):
-        self.response = login(self.clientName, self.clientEmail)
+    response = login(clientName, clientEmail)
 
     def test_login_200(self):
         assert self.response.status_code == 201, 'Status code is not OK!'
@@ -28,3 +29,7 @@ class TestApiClient:
         assert self.response.status_code == 400, 'Status code is not OK!'
         assert self.response.json()[
                    'error'] == 'Invalid or missing client email.', 'Invalid email error is not correct!'
+
+
+if __name__ == '__main__':
+    sys.exit(pytest.main(["-qq"], plugins=[TestApiClient()]))

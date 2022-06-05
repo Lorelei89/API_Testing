@@ -1,3 +1,7 @@
+import sys
+
+import pytest
+
 from books.requests.books import *
 
 
@@ -14,7 +18,7 @@ class TestBooks:
 
     def test_get_all_books(self):
         r = get_books()
-        assert len(r.josn()) == 6, "Book total is wrong"
+        assert len(r.json()) == 6, "Book total is wrong"
 
     def test_get_all_books_limit(self):
         r = get_books(limit=3)
@@ -26,13 +30,14 @@ class TestBooks:
 
     def test_get_all_books_type_non_fiction(self):
         r = get_books(book_type='non-fictional')
-        assert len(r.json()) == 2, 'Type non-fiction is not working.'
+        assert len(r.json()) == 1, 'Type non-fiction is not working.'
 
     def test_get_all_books_type_limit(self):
         r = get_books(book_type='fiction', limit=2)
+        r2 = get_books(book_type='non-fiction')
         assert len(r.json()) == 2, 'Limit are not working!'
         assert r.json()[0]['type'] == 'fiction', 'Type filter is not working.'
-        assert r.json()[1]['type'] == 'non-fiction', 'Type filter is not working.'
+        assert r2.json()[1]['type'] == 'non-fiction', 'Type filter is not working.'
 
     def test_get_book(self):
         r = get_book(1)
@@ -53,3 +58,7 @@ class TestBooks:
         r = get_book(202)
         assert r.status_code == 404, 'Status code is not OK'
         assert r.json()['error'] == 'No book with id 202', 'Invalid ID message not OK'
+
+
+if __name__ == '__main__':
+    sys.exit(pytest.main(["-qq"], plugins=[TestBooks()]))

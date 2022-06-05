@@ -18,5 +18,5 @@ def get_token():
         'clientName': 'Maria',
         'clientEmail': f'valid_email{nr}@email.com'
     }
-    response = requests.post("tps://simple-books-api.glitch.me/api-clients/", json=json)
+    response = requests.post("https://simple-books-api.glitch.me/api-clients/", json=json)
     return response.json()['accessToken']
